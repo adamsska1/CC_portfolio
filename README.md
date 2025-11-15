@@ -1,6 +1,5 @@
-# CC_portfolio
-
-# README
+CC_portfolio
+============
 
 * Ruby version: ruby 3.0.0p0
 
