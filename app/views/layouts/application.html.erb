@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio</title>
+    <!-- Alternative: <title><%= content_for(:title) || "App" %></title> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- NOT used:
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    -->
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <!-- Used with the Alternative (above) <%= yield :head %> -->
+
+    <!--
+    Note: used for Progressive Web Apps (PWAs):
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    -->
+
+    <!-- CSS files for Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min">
+
+    <!-- New way of setting the fonts:
+    now set in app/assets/stylesheets/application.css.scss -
+    CSS for the web font.
+    Old way of setting the fonts:
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,500,700" rel="stylesheet" type="text/css">
+    -->
+
+    <!-- NOT used:
+    <link rel="stylesheet" type="text/css" href="style.css">
+    -->
+
+    <!--
+    <link rel="alternate" type="application/rss+xml" title="Smashing Magazine &amp;raquo; Feed" href="https://www.smashingmagazine.com/feed/">
+    -->
+    <!-- <link rel="alternate" type="text/html" title="Portfolio"> -->
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <!-- NOT used?
+    <%= javascript_importmap_tags %>
+    -->
+  </head>
+
+  <body>
+    <header>
+      <%= render 'layouts/header' %>
+    </header>
+
+    <div class="container">
+      <%= render 'layouts/navbar' %>
+
+      <div class="main-content">
+        <%= yield %>
+      </div>
+
+    </div>
+    <footer>
+      <%= render 'layouts/footer' %>
+    </footer>
+  </body>
+</html>
+</html>
+
